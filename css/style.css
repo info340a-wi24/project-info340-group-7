@@ -13,7 +13,7 @@ body {
   left: 0;
   width: 30%;
   overflow-y: auto;
-  z-index: 1; /* Add z-index to ensure the left section is behind the right section */
+  z-index: 1;
   margin-top: 55px;
 }
 
@@ -26,7 +26,7 @@ body {
   padding: 20px;
   margin-left: 30%;
   margin-top: 55px;u
-  z-index: 0; /* Set a lower z-index for the right section */
+  z-index: 0;
 }
 
 .job-listing {
@@ -70,7 +70,7 @@ body {
     position: relative;
     width: 100%;
     margin-bottom: 20px;
-    z-index: 0; /* Reset z-index for smaller screens */
+    z-index: 0;
   }
 
   .right-section {
