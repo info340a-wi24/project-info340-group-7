@@ -160,14 +160,15 @@ html, body {
   
   /* Saved Jobs*/
 
-body {
+.savedJobs body {
+    background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     padding-top: 70px;
-}
 
-header{
+}
+header {
     font-weight: 300;
     font-family: sans-serif;
     text-align: center;
@@ -208,12 +209,11 @@ td {
 text-align: right;
 padding-right: 10px;
 } 
-.action 
+
 .jobdesc{
     margin-bottom: 1rem;
     
 }
-
 .companyloca{
     font-size: 15px;
     margin-top: 5px;
@@ -224,7 +224,6 @@ padding-right: 10px;
     font-size: .7em;
     color: grey;
 }
-
 tbody{
     background-color: #eee;
 }
@@ -300,7 +299,7 @@ button {
   }
   
   /* Index - style */ 
-  body {
+  .index body {
     background-color: #f8f9fa;
     margin: 0;
   }
