@@ -1,11 +1,13 @@
-import React from 'react'; //import React Component
+import React from 'react';
 import { Routes, Route, Navigate, Link } from 'react-router-dom';
+import { JobPosting } from './JobPosting';
 
 
 function App(props) {
     return (
         <div>
-        <header>
+            <JobPosting />
+        {/* <header>
             <div>
             <h1></h1>
             </div>
@@ -17,7 +19,7 @@ function App(props) {
         </main>
 
         <footer>
-        </footer>
+        </footer> */}
         </div>
     );
 }
