@@ -5,6 +5,7 @@ import { Review } from './Review';
 
 
 function JobPosting(props) {
+    console.log(props);
     return (
         <div>
             <header>
