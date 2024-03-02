@@ -1,7 +1,9 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import JobListing from './JobListing';
-import '../index.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
 function Homepage() {
   const onSearch = () => {};
