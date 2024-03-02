@@ -1,7 +1,8 @@
 import React from 'react'; //import React Component
-import { Routes, Route, Navigate, Link } from 'react-router-dom';
+import './index.css'
+// import { Routes, Route, Navigate, Link } from 'react-router-dom';
 
-
+/*
 function App(props) {
     return (
         <div>
@@ -22,3 +23,19 @@ function App(props) {
     );
 }
 export default App;
+
+*/
+
+import SavedJobs from './savedJobs';
+import Login from './login';
+
+function App() {
+    return (
+      <div>
+        <Login/>
+        <SavedJobs />
+      </div>
+    );
+  }
+  
+  export default App;
