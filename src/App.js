@@ -1,6 +1,6 @@
 import React from 'react'; //import React Component
 import Homepage from './Homepage';
-import SavedJobs from './savedJobs';
+import SavedJobs from './SavedJobs';
 import Profile from './Profile';
 import NavigationBar from './NavigationBar';
 import { JobPosting } from './JobPosting';
