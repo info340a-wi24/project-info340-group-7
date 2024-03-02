@@ -332,20 +332,21 @@ button {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 30%;
+    width: 20%;
     overflow-y: auto;
-    z-index: 1;
+    z-index: 0;
     margin-top: 55px;
   }
   
   .left-section a {
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
   }
   
   .right-section {
     margin-left: 20%;
-    margin-top: 55px;
+    width: 85%;
     z-index: 0;
   }
   
@@ -357,10 +358,15 @@ button {
     padding: 1.5px;
     border: 1px solid black;
   }
+
+  .job-listing {
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px 5px 5px 0;
+  }
   
   .job-listing .job-listing-items h5 {
     margin-bottom: 0;
-    
   }
   
   .job-listing .job-listing-items p:first-of-type {
@@ -372,7 +378,7 @@ button {
   .job-listing .job-listing-items p {
     margin: 0;
     padding: 0;
-  }
+  } 
   
   .job-listing .job-listing-items p:last-of-type {
     margin-top: 10px;
@@ -390,6 +396,7 @@ button {
     .right-section {
       margin-left: 0;
       margin-top: 10px;
+      width: 100%;
     }
   }
   
