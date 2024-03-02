@@ -1,24 +1,35 @@
 import React from 'react'; //import React Component
-import { Routes, Route, Navigate, Link } from 'react-router-dom';
+import Homepage from './Homepage';
+import SavedJobs from './SavedJobs';
+import Profile from './Profile';
+import NavigationBar from './NavigationBar';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 
 function App(props) {
     return (
         <div>
-        <header>
-            <div>
-            <h1></h1>
-            </div>
-        </header>
-        
-        <main>
-            <div>
-            </div>
-        </main>
+          <main className="container">
+            <div className="row">
+              <div className="col-3">
+                <NavigationBar />
+              </div>
+              <div className="row">
+                <Routes>
+                    <Route path="/savedJobs" element={<SavedJobs />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/homepage" element={<Homepage />} />
 
-        <footer>
-        </footer>
+                    <Route path="*" element={<Navigate to="homepage" />} />
+                </Routes>
+              </div>
+            </div>
+          </main>
+    
+          <footer className="container">
+            <small>Evan Chang, Sara Duan, Roshan Mettupalli, Megan Pham</small>
+          </footer>
         </div>
-    );
+      );
 }
 export default App;
