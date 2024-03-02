@@ -160,40 +160,52 @@ html, body {
   
   /* Saved Jobs*/
 
-.savedJobs body {
-    background-color: #f8f9fa;
+body {
+    background-color: #c1bbdd ;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 70px;
+    font-family: 'Poppins', sans-serif;
 
 }
+
 header {
-    font-weight: 300;
-    font-family: sans-serif;
-    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1{
-    margin-bottom: 0;
+   text-align: left;
+   font-weight: bold;   
+   margin-bottom: 5px;
 }
 
-h2{
-    color: #808080;
-    font-size: 1.5rem;
+p {
+  margin-top: 0; 
+  margin-bottom: 10px;
 }
 
 thead {
     display: none;
 }
 
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+} 
+
+.navbar-nav .nav-link {
+  font-family: 'Poppins', sans-serif;
+}
+
 table{
-    width: 65%;
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    font-family: sans-serif;
     margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 h3 {
@@ -206,8 +218,8 @@ td {
 }
 
 .action {
-text-align: right;
-padding-right: 10px;
+  text-align: right;
+  padding-right: 10px;
 } 
 
 .jobdesc{
@@ -222,10 +234,10 @@ padding-right: 10px;
 
 .deadline {
     font-size: .7em;
-    color: grey;
+    color: darkgreyx;
 }
 tbody{
-    background-color: #eee;
+    background-color: white;
 }
 
 tbody tr {
