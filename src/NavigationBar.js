@@ -13,7 +13,7 @@ function NavigationBar() {
             
             <ul class="navbar-nav">
               <li class="nav-item active">
-              <a class="nav-link"><NavLink to="/homepage" style={{ textDecoration: 'none', color: 'white' }}>Homepage</NavLink></a>
+              <a class="nav-link"><NavLink to="/homepage" style={{ textDecoration: 'none', color: 'white' }}>Job Listings</NavLink></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link"><NavLink to="/savedJobs" style={{ textDecoration: 'none', color: 'white' }}>Saved Jobs</NavLink></a>
