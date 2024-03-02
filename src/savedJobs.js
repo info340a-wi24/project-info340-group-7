@@ -1,6 +1,7 @@
 import React from 'react';
 import SJTableRow from './sjTableRow';
 import TableInfo from './data/tableInfo.json';
+import './index.css';
 
 export default function SavedJobs() {
     return (

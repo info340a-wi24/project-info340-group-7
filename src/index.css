@@ -312,8 +312,16 @@ button {
   
   /* Index - style */ 
   body {
-    background-color: #f8f9fa;
-    margin: 0;
+    background-color: #c1bbdd;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+  }
+
+  .job-listing {
+    background-color: white;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid lightgrey; 
   }
   
   .left-section {
@@ -336,16 +344,9 @@ button {
   }
   
   .right-section {
-    padding: 20px;
     margin-left: 20%;
     margin-top: 55px;
     z-index: 0;
-  }
-  
-  .job-listing {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
   }
   
   .job-listing img {
