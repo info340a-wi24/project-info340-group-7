@@ -311,7 +311,7 @@ button {
   }
   
   /* Index - style */ 
-  .index body {
+  body {
     background-color: #f8f9fa;
     margin: 0;
   }
@@ -337,7 +337,7 @@ button {
   
   .right-section {
     padding: 20px;
-    margin-left: 30%;
+    margin-left: 20%;
     margin-top: 55px;
     z-index: 0;
   }
@@ -392,5 +392,3 @@ button {
     }
   }
   
-
-
