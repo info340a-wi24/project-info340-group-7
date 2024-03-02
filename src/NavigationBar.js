@@ -33,16 +33,3 @@ function NavigationBar() {
 }
 
 export default NavigationBar;
-
-export function AboutNav() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <h2>About</h2>
-      <ul className="list-unstyled">
-        <li><NavLink to="/savedJobs">Saved Jobs</NavLink></li>
-        <li><NavLink to="/profile">Profile</NavLink></li>
-        <li><NavLink to="/homepage">Homepage</NavLink></li>
-      </ul>
-    </nav>
-  );
-}
