@@ -20,6 +20,8 @@ function App(props) {
                     <Route path="/savedJobs" element={<SavedJobs />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/homepage" element={<Homepage />} />
+
+                    <Route path="/jobPosting" element={<JobPosting />} />
                     
                     <Route path="*" element={<Navigate to="homepage" />} />
                 </Routes>
