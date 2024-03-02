@@ -29,7 +29,17 @@ function Homepage() {
   }
 
   return (
+    <div>
+    <div class="left-section">
+  <ul class="list-unstyled">
+    <li><a class="text-decoration-none text-white" href="#">Interview Prep</a></li>
+    <li><a class="text-decoration-none text-white" href="#">Resume Builder</a></li>
+    <li><a class="text-decoration-none text-white" href="#">Job Seeker Guidance</a></li>
+    <li><a class="text-decoration-none text-white" href="#">Effective Networking Tips</a></li>
+  </ul>
+</div>
     <div className="right-section">
+      <h2>Job Listings</h2>
       <SearchBar onSearch={onSearch} suggestSearch={suggestSearch} />
 
       <JobListing
@@ -122,6 +132,9 @@ function Homepage() {
         posted="Posted 2 weeks ago"
       />
     </div>
+    </div>
+
+
   );
 }
 

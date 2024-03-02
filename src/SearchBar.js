@@ -12,6 +12,8 @@ function SearchBar({ onSearch, suggestSearch }) {
         <button type="button" className="btn btn-secondary" onClick={() => suggestSearch('Barista')}>Barista</button>
         <button type="button" className="btn btn-secondary" onClick={() => suggestSearch('Electrician')}>Electrician</button>
         <button type="button" className="btn btn-secondary" onClick={() => suggestSearch('Janitor')}>Janitor</button>
+        <button type="button" className="btn btn-secondary" onClick={() => suggestSearch('Chef')}>Chef</button>
+
       </div>
     </div>
   );
