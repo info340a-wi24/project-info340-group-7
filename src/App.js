@@ -1,6 +1,6 @@
 import React from 'react';
-import Homepage from './components/Homepage';
-import NavigationBar from './components/NavigationBar';
+import Homepage from './Homepage';
+import NavigationBar from './NavigationBar';
 
 function App() {
   return (
