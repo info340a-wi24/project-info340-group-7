@@ -393,3 +393,82 @@ button {
     }
   }
   
+
+/* Job Posting */
+.job-posting-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 9vh;
+}
+
+.basic-info-container, .review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.basic-info-container h1 {
+  font-size: 40px;
+}
+
+.basic-info-container p {
+  font-size: 17px;
+}
+
+.apply button {
+margin: 20px;
+background-color: #5F5AA2;
+border-radius: 8px;
+border-style: none;
+box-sizing: border-box;
+color: #FFFFFF;
+cursor: pointer;
+display: inline-block;
+font-size: 14px;
+font-weight: 500;
+height: 40px;
+outline: none;
+padding: 10px 16px;
+position: relative;
+text-align: center;
+}
+
+.review p {
+  margin-top: -5px;
+}
+
+.review-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-text {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ddd;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  margin: 20px;
+  background-color: #5F5AA2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .job-posting-container {
+    width: 90%;
+  }
+}
