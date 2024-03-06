@@ -32,10 +32,9 @@ function Homepage() {
     <div>
     <div class="left-section">
   <ul class="list-unstyled">
-    <li><a class="text-decoration-none text-white" href="#">Interview Prep</a></li>
-    <li><a class="text-decoration-none text-white" href="#">Resume Builder</a></li>
-    <li><a class="text-decoration-none text-white" href="#">Job Seeker Guidance</a></li>
-    <li><a class="text-decoration-none text-white" href="#">Effective Networking Tips</a></li>
+    <li><a class="text-decoration-none text-white" href={`https://ung.edu/career-services/online-career-resources/interview-well/tips-for-a-successful-interview.php`}>Interview Prep</a></li>
+    <li><a class="text-decoration-none text-white" href={`https://www.overleaf.com/latex/templates/tagged/cv`}>Resume Builder</a></li>
+    <li><a class="text-decoration-none text-white" href={`https://www.theforage.com/blog/basics/career-aptitude-test`}>Career Apitude Test</a></li>
   </ul>
 </div>
     <div className="right-section">
