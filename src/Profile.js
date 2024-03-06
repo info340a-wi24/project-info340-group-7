@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
@@ -22,7 +23,8 @@ export default function Profile(props) {
                         <div className="p-3 pb-5 border-right">
                             <div className="mt-2 text-center">
                                 <a href="edit-profile.html">
-                                    <button className="btn btn-primary profile-button" type="button">Edit Profile</button>
+                                    <button className="btn btn-primary profile-button" type="button">
+                                <NavLink to="/editProfile" style={{ textDecoration: 'none', color: 'white' }}>Edit Profile</NavLink></button>
                                 </a>
                             </div>
                         </div>

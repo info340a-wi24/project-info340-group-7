@@ -1,43 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
-function EditProfile() {
+export default function EditProfile(props) {
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="index.html">Connect</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
-                            <li className="nav-item active">
-                                <a className="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="savedJobs.html">My Jobs</a>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="#">Action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
-                                    <a className="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                                <a className="nav-link" href="profile.html">
-                                    <i className="bi bi-person-fill"></i> Profile
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+        <div class="editprofile">
             <main>
                 <div className="container bg-white mt-5">
                     <div className="row">
@@ -45,9 +13,6 @@ function EditProfile() {
                             <div className="d-flex flex-column align-items-center text-center p-3 py-5">
                                 <img className="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" alt="Profile Pic" />
                                 <span className="font-weight-bold">Curious George</span>
-                                <span className="text-black-50">georgeiscurious@gmail.com</span>
-                                <span className="text-black-50">Seattle, Washington</span>
-                                <span className="text-black-50 py-3">Student at University of Washington</span>
                             </div>
                         </div>
 
@@ -107,7 +72,7 @@ function EditProfile() {
                                     
                                 <div className="mt-5 text-center">
                                     <a href="profile.html">
-                                        <button className="btn btn-primary profile-button" type="button">Save Profile</button>
+                                        <button className="btn btn-primary profile-button" type="button"><NavLink to="/profile" style={{ textDecoration: 'none', color: 'white' }}>Save Profile</NavLink></button>
                                     </a>
                                 </div>
                             </div>
@@ -139,5 +104,3 @@ function EditProfile() {
         </div>
     );
 }
-
-export default EditProfile;
