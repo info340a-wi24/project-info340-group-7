@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function JobListing({ title, logoSrc, company, location, pay, qualifications, posted }) {
+function JobListing({ id, title, logoSrc, company, location, pay, qualifications, posted }) {
   return (
     <div className="job-listing" data-title={title}>
       <div className="d-flex">
@@ -12,6 +13,7 @@ function JobListing({ title, logoSrc, company, location, pay, qualifications, po
           <p>Pay: {pay}</p>
           <p>Minimum Qualifications: {qualifications}</p>
           <p>Posted {posted}</p>
+          <Link to={`/jobPosting/${id}`}>View Details</Link>
         </div>
       </div>
     </div>

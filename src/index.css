@@ -253,13 +253,16 @@ body {
 }
 
 .job-posting-container {
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     margin-top: 9vh;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
 }
 
 .basic-info-container, .review {
