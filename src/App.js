@@ -23,7 +23,7 @@ function App(props) {
                     <Route path="/editProfile" element={<EditProfile />} />
                     <Route path="/homepage" element={<Homepage />} />
 
-                    <Route path="/jobPosting" element={<JobPosting />} />
+                    <Route path="/jobPosting/:id" element={<JobPosting />} />
                     
                     <Route path="*" element={<Navigate to="homepage" />} />
                 </Routes>

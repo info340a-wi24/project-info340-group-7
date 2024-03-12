@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
+import { getDatabase, ref, onValue, off } from 'firebase/database';
 import SearchBar from './SearchBar';
 import JobListing from './JobListing';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import {db} from './index';
 
 function Homepage() {
+  const [jobs, setJobs] = useState([]);
   const onSearch = () => {};
   
   function suggestSearch(keyword) {
@@ -28,6 +31,23 @@ function Homepage() {
     });
   }
 
+  useEffect(() => {
+    const jobsRef = ref(db, 'jobs');
+    console.log(jobsRef);
+    onValue(jobsRef, (snapshot) => {
+      const data = snapshot.val();
+      console.log(data);
+      if (data) {
+        const jobArray = Object.keys(data).map(key => ({ id: key, ...data[key] }));
+        setJobs(jobArray);
+      }
+    });
+
+    return () => {
+      off(jobsRef);
+    };
+  }, []);
+
   return (
     <div>
     <div class="left-section">
@@ -40,8 +60,21 @@ function Homepage() {
     <div className="right-section">
       <h2>Job Listings</h2>
       <SearchBar onSearch={onSearch} suggestSearch={suggestSearch} />
-
-      <JobListing
+      {jobs.map(job => (
+          <JobListing
+            key={job.id}
+            id={job.id}
+            title={job.title}
+            logoSrc={job.logoSrc}
+            company={job.company}
+            location={job.location}
+            pay={job.pay}
+            qualifications={job.qualifications}
+            posted={job.posted}
+          />
+        ))}
+      {/* <JobListing
+        id="0"
         title="Barista"
         logoSrc="../../assets/logo.png"
         company="District Market UW West Campus"
@@ -129,7 +162,7 @@ function Homepage() {
         pay="$30,000 - $40,000 per year"
         qualifications="Some College"
         posted="Posted 2 weeks ago"
-      />
+      /> */}
     </div>
     </div>
 
