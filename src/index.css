@@ -170,6 +170,8 @@ header {
     top: 0;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 h1{
@@ -213,8 +215,7 @@ td {
 }
 
 .action {
-  text-align: right;
-  padding-right: 10px;
+  margin-bottom: 10px;
 } 
 
 .jobdesc{
@@ -222,21 +223,25 @@ td {
     
 }
 .companyloca{
-    font-size: 15px;
     margin-top: 5px;
     margin-bottom: 2px;
 }
 
 .deadline {
-    font-size: .7em;
-    color: darkgreyx;
+    color: grey;
+    margin-bottom: 0;
+
 }
 tbody{
     background-color: white;
 }
 
 tbody tr {
-    border-bottom: 1px solid black; 
+  border-bottom: none;
+}
+
+tbody td {
+  background-color: white;
 }
 
 tbody tr:last-child {
@@ -245,6 +250,11 @@ tbody tr:last-child {
 
 tbody tr:hover{
     background-color: lightgrey;
+}
+
+td,th {
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /* Job Posting */
@@ -477,3 +487,8 @@ text-align: center;
     width: 90%;
   }
 }
+
+.save-button, .action{
+  margin-right: 10px; 
+}
+
