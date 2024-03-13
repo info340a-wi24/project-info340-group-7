@@ -219,16 +219,21 @@ td {
 } 
 
 .jobdesc{
-    margin-bottom: 1rem;
-    
+  margin-bottom: 5px;
 }
+
 .companyloca{
-    margin-top: 5px;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
+}
+
+.companyInfo {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .deadline {
     color: grey;
+    margin-top: 6px;
     margin-bottom: 0;
 
 }
@@ -238,6 +243,7 @@ tbody{
 
 tbody tr {
   border-bottom: none;
+  border-bottom: 5px solid #c1bbdd;
 }
 
 tbody td {
@@ -248,8 +254,8 @@ tbody tr:last-child {
     border-bottom: none;
 }
 
-tbody tr:hover{
-    background-color: lightgrey;
+tbody tr:hover td {
+  background-color: lightgrey;
 }
 
 td,th {
