@@ -35,9 +35,8 @@ function JobPosting(props) {
                     <section className="basic-info-container">
                     <h1>Barista</h1>
                     <div className="overview">
-                        <p>District Market UW West Campus - Seattle, WA - Posted 2 days ago</p>
-                        <p>$20,000 - $30,000 | Part-Time</p>
-                        <p>Application Deadline: March 19, 2024</p>
+                        <p>{job.company} - {job.location} - {job.posted}</p>
+                        <p>{job.pay} | {job.qualifications}</p>
                     </div>
                     <div className="apply">
                         <button>
@@ -51,14 +50,20 @@ function JobPosting(props) {
                     <section className="job-description-container">
                     <h1>About the Job</h1>
                     <div>
-                    <p>{job.company} - {job.location} - {job.posted}</p>
-      <p>{job.pay} | {job.qualifications}</p>
+                        <p className="small-title">Overview:</p>
+                        <p>{job.overview}</p>
+
+                        <p className="small-title">Responsibilities:</p>
+                        <p>{job.responsibilities}</p>
+
+                        <p className="small-title">Benefits:</p>
+                        <p>{job.benefits}</p>
                     </div>
                     </section>
                     <section className="review">
                         <h1>Review:</h1>
                         <p>Worked here before? Leave a Review!</p>
-                        <Review companyId="District Market UW West Campus"/>
+                        <Review company="District Market UW West Campus"/>
                     </section>
                 </div>
             </main>

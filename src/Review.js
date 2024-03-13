@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './index.css';
 import { getDatabase, ref, push, set, child, get } from 'firebase/database';
+import { db } from './index';
 
 function Review(props) {
   const [reviewText, setReviewText] = useState('');
@@ -10,9 +11,8 @@ function Review(props) {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const db = getDatabase();
         console.log(db);
-        const reviewsRef = ref(db, 'reviews');
+        const reviewsRef = ref(db, `companies/${props.company}/reviews`);
         const reviewsSnapshot = await get(child(reviewsRef));
         if (reviewsSnapshot.exists()) {
           const reviewsData = reviewsSnapshot.val();
@@ -38,8 +38,7 @@ function Review(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const db = getDatabase();
-      const reviewsRef = ref(db, `companies/${props.companyId}/reviews`);
+      const reviewsRef = ref(db, `companies/${props.company}/reviews`);
       const newReviewRef = push(reviewsRef);
       await set(newReviewRef, {
         text: reviewText,
