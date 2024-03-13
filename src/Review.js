@@ -1,33 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './index.css';
-import { getDatabase, ref, push, set, child, get } from 'firebase/database';
+import { getDatabase, ref, push, set, off, onValue } from 'firebase/database';
+import { db } from './index';
 
 function Review(props) {
   const [reviewText, setReviewText] = useState('');
   const [reviews, setReviews] = useState([]);
+  const [newReview, setNewReview] = useState({ date: '', text: '' });
 
   useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const db = getDatabase();
-        console.log(db);
-        const reviewsRef = ref(db, 'reviews');
-        const reviewsSnapshot = await get(child(reviewsRef));
-        if (reviewsSnapshot.exists()) {
-          const reviewsData = reviewsSnapshot.val();
-          const reviewsArray = Object.keys(reviewsData).map(key => ({
-            id: key,
-            ...reviewsData[key]
-          }));
-          setReviews(reviewsArray);
+    const fetchCompanyReviews = async () => {
+      console.log(props.companyName);
+      const companiesRef = ref(db, `companies/${props.companyName}/reviews`);
+
+      onValue(companiesRef, (snapshot) => {
+        const data = snapshot.val();
+        console.log(data);
+        if (data) {
+          setReviews(data);
         }
-      } catch (error) {
-        console.error('Error fetching reviews: ', error);
-      }
+      });
     };
-    
-    fetchReviews();
+
+    fetchCompanyReviews();
   }, []);
   
 
@@ -37,17 +33,14 @@ function Review(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    try {
-      const db = getDatabase();
-      const reviewsRef = ref(db, `companies/${props.companyId}/reviews`);
-      const newReviewRef = push(reviewsRef);
-      await set(newReviewRef, {
-        text: reviewText,
-      });
-      setReviewText('');
-    } catch (error) {
-      console.error('Error adding review: ', error);
-    }
+    const db = getDatabase();
+    const newReviewRef = push(ref(db, `companies/${props.companyName}/reviews`));
+    const newReviewData = {
+      date: new Date().toISOString(),
+      text: reviewText,
+    };
+    await set(newReviewRef, newReviewData);
+    setReviewText('');
   };
 
   return (
@@ -58,13 +51,18 @@ function Review(props) {
       </form>
 
       <div className="reviews-list">
-        {reviews.map(review => (
-          <div key={review.id} className="review-item">
-            <p>{review.text}</p>
-          </div>
-        ))}
-        {console.log(reviews)}
-      </div>
+        {Object.entries(reviews).map(([companyName, companyReviews]) => (
+          <div key={companyName} className="reviews">
+            <ul>
+              {Object.values(companyReviews).map((review, index) => (
+
+                  <p>{review}</p>
+
+              ))}
+            </ul>
+    </div>
+  ))}
+</div>
     </div>
   );
 }
