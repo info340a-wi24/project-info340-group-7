@@ -24,7 +24,7 @@ function JobListing({ id, title, logoSrc, company, location, pay, qualifications
           <p>Pay: {pay}</p>
           <p>Minimum Qualifications: {qualifications}</p>
           <p>Posted {posted}</p>
-          <button onClick={handleSave}>{isSaved ? 'Unsave' : 'Save'}</button>
+          <button onClick={handleSave} className="save-button" >{isSaved ? 'Unsave' : 'Save'}</button>
           <Link to={`/jobPosting/${id}`}>View Details</Link>
         </div>
       </div>
