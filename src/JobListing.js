@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getDatabase, ref, update } from 'firebase/database';
 
-function JobListing({ id, title, logoSrc, company, location, pay, qualifications, posted }) {
+function JobListing({ id, title, logoSrc, company, location, pay, qualifications, posted, saved }) {
+  const [isSaved, setSaved] = useState(saved);
+
+  const handleSave = () => {
+    // Update the 'saved' property in the database
+    const db = getDatabase();
+    const jobRef = ref(db, `jobs/${id}`);
+    update(jobRef, { saved: !isSaved });
+    setSaved(!isSaved);
+  };
+
   return (
     <div className="job-listing" data-title={title}>
       <div className="d-flex">
@@ -13,6 +24,7 @@ function JobListing({ id, title, logoSrc, company, location, pay, qualifications
           <p>Pay: {pay}</p>
           <p>Minimum Qualifications: {qualifications}</p>
           <p>Posted {posted}</p>
+          <button onClick={handleSave}>{isSaved ? 'Unsave' : 'Save'}</button>
           <Link to={`/jobPosting/${id}`}>View Details</Link>
         </div>
       </div>

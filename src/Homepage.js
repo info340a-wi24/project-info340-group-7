@@ -71,6 +71,7 @@ function Homepage() {
             pay={job.pay}
             qualifications={job.qualifications}
             posted={job.posted}
+            saved={job.saved || false}
           />
         ))}
       {/* <JobListing
