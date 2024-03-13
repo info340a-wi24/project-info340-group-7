@@ -318,6 +318,18 @@ button {
     margin-top: -5px;
 }
 
+.reviews {
+  border: 1px rgb(136, 136, 136) solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 90%;
+  text-align: left;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+
 @media (max-width: 768px) {
     .job-posting-container {
       width: 90%;
@@ -468,6 +480,13 @@ text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
 }
 
 .review-text {
@@ -491,6 +510,15 @@ text-align: center;
 @media (max-width: 768px) {
   .job-posting-container {
     width: 90%;
+  }
+  .reviews, .review-form form {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .reviews, .review-form form {
+    max-width: 60%;
   }
 }
 
